@@ -91,14 +91,51 @@ public class DoublyLinkedList<T extends Comparable<T>> {
     }
 
     public void sort() {
-        sort(this);
+        DoublyLinkedList<T> sorted = sort(this);
+        this.head = sorted.head;
+        this.tail = sorted.tail;
+        this.length = sorted.length;
     }
 
-    private void sort(DoublyLinkedList<T> list) {
-        Item tmp = head;
-        while (tmp != null) {
-
+    private DoublyLinkedList<T> sort(DoublyLinkedList<T> list) {
+        if (list.size() < 2) {
+            return list;
+        } else {
+            DoublyLinkedList<T> left = new DoublyLinkedList<T>();
+            DoublyLinkedList<T> right = new DoublyLinkedList<T>();
+            int middle = list.length / 2;
+            for (int i = 0; i < middle; ++i) {
+                left.add(list.get(i));
+            }
+            for (int i = middle; i < list.length; ++i) {
+                right.add(list.get(i));
+            }
+            left = sort(left);
+            right = sort(right);
+            return merge(left, right);
         }
+    }
+
+    private DoublyLinkedList<T> merge(DoublyLinkedList<T> left, DoublyLinkedList<T> right) {
+        DoublyLinkedList<T> result = new DoublyLinkedList<T>();
+        while (left.size() > 0 || right.size() > 0) {
+            if (left.size() > 0 && right.size() > 0) {
+                if (left.get(0).compareTo(right.get(0)) <= 0) {
+                    result.add(left.get(0));
+                    left.remove(0);
+                } else {
+                    result.add(right.get(0));
+                    right.remove(0);
+                }
+            } else if (left.size() > 0) {
+                result.add(left.get(0));
+                left.remove(0);
+            } else {
+                result.add(right.get(0));
+                right.remove(0);
+            }
+        }
+        return result;
     }
 
     private boolean indexInBounds(int i) {
@@ -117,6 +154,12 @@ public class DoublyLinkedList<T extends Comparable<T>> {
         }
         sb.append("]");
         return sb.toString();
+    }
+
+    public DoublyLinkedList() {
+        head = null;
+        tail = null;
+        length = 0;
     }
 
     private Item head;
