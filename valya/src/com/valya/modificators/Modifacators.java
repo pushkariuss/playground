@@ -5,6 +5,7 @@ package com.valya.modificators;
  */
 public class Modifacators {
     public int MyData;
+    public int MyData1;
     public Modifacators() {
         MyData = 123;
     }
