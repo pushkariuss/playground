@@ -32,7 +32,7 @@ public class Car {
                 System.out.println("For quality road equals  to " + qualityRoad+" max speed will be "+getMaxSpeed()*0.4);
                 break;
             case 1:
-                System.out.println("For quality road equals to " + qualityRoad+" max speed will be "+getMaxSpeed()*0.4);
+                System.out.println("For quality road equals  to " + qualityRoad+" max speed will be "+getMaxSpeed()*0.4);
             break;
             case 2:
                 System.out.println("For quality road equals to " + qualityRoad+" max speed will be "+getMaxSpeed()*0.5);
