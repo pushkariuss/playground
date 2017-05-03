@@ -29,7 +29,7 @@ public class Car {
     public double currentSpeed(int qualityRoad){
         switch ( qualityRoad ){
             case 0:
-                System.out.println("For quality road equals to " + qualityRoad+" max speed will be "+getMaxSpeed()*0.4);
+                System.out.println("For quality road equals  to " + qualityRoad+" max speed will be "+getMaxSpeed()*0.4);
                 break;
             case 1:
                 System.out.println("For quality road equals to " + qualityRoad+" max speed will be "+getMaxSpeed()*0.4);
