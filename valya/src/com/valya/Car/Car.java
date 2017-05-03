@@ -29,22 +29,22 @@ public class Car {
     public double currentSpeed(int qualityRoad){
         switch ( qualityRoad ){
             case 0:
-                System.out.println(getMaxSpeed()*0.4);
+                System.out.println("For quality road equals to " + qualityRoad+" max speed will be "+getMaxSpeed()*0.4);
                 break;
             case 1:
-                System.out.println(getMaxSpeed()*0.4);
+                System.out.println("For quality road equals to " + qualityRoad+" max speed will be "+getMaxSpeed()*0.4);
             break;
             case 2:
-                System.out.println(getMaxSpeed()*0.5);
+                System.out.println("For quality road equals to " + qualityRoad+" max speed will be "+getMaxSpeed()*0.5);
             break;
             case 3:
-                System.out.println(getMaxSpeed()*0.7);
+                System.out.println("For quality road equals to " + qualityRoad+" max speed will be "+getMaxSpeed()*0.7);
             break;
             case 4:
-                System.out.println(getMaxSpeed()*1.0);
+                System.out.println("For quality road equals to " + qualityRoad+" max speed will be "+getMaxSpeed()*1.0);
             break;
             case 5:
-                System.out.println(getMaxSpeed()*1.0);
+                System.out.println("For quality road equals to " + qualityRoad+" max speed will be "+getMaxSpeed()*1.0);
             break;
             default:
                 System.out.println("Please setup number from 0 to 5");

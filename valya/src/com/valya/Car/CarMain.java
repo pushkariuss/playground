@@ -9,7 +9,7 @@ public class CarMain {
         System.out.println(car.getName());
         System.out.println(car.getMaxSpeed());
         System.out.println(car);
-        car.currentSpeed(20);
+        car.currentSpeed(4);
     }
 
 }
