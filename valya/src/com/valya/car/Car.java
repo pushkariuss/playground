@@ -1,4 +1,4 @@
-package com.valya.Car;
+package com.valya.car;
 
 import java.util.Random;
 
