@@ -9,7 +9,7 @@ public class CarMain {
         System.out.println(car.getName());
         System.out.println(car.getMaxSpeed());
         System.out.println(car);
-        car.currentSpeed(4);
-    }
-
-}
+        car.currentSpeed(2);
+        System.out.println("speed with quality road");
+        System.out.println(car.currentSpeed(1));
+}}
