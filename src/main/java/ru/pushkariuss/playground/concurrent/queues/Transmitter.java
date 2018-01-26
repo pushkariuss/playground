@@ -1,6 +1,6 @@
 package ru.pushkariuss.playground.concurrent.queues;
 
-import com.lolka.common.PackFactory;
+import ru.pushkariuss.playground.concurrent.common.PackFactory;
 
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
